@@ -4,11 +4,11 @@ import Main from './components/Main'
 
 const App = () => {
   return (
-    <div className="max-[100vw]: overflow-x-hidden">
-      <header className='w-full fixed z-40'>
+    <div  className="max-w-[100vw] overflow-x-hidden">
+      <header className='w-full fixed z-10'>
         <Header/>
       </header>
-      <main className='w-full md:ml-[25%] lg:ml-0 lg:mt-28 lg:w-full bg-red-400'>
+      <main className='w-full md:ml-[20%] lg:ml-0 lg:mt-28 lg:w-full bg-red-400'>
       <Main/>
       </main>
     </div>

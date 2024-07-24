@@ -1,12 +1,12 @@
-import React,{useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import NavItem from "./Header/NavItem.jsx";
 import { menuList } from "../assets/contents/index.jsx";
 
 const Header = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
   const [screenSize, setScreenSize] = useState(window.innerWidth);
-  
-    const handleResize = () => {
+
+  const handleResize = () => {
     setScreenSize(window.innerWidth);
   };
 
@@ -22,21 +22,29 @@ const Header = () => {
 
   return (
     <nav className="w-full h-screen relative">
-    <div className={`bg-black text-white p-5 z-10 ${isMobile ? "w-full absolute bottom-0" : isTablet ? "h-full w-1/4 absolute left-0 " : "w-full absolute top-0"}`}>
-      <ul className="flex md:flex-col lg:flex-row md:items-starts items-center justify-around">
-        {menuList.map((menu) => (
-          <NavItem
-            key={menu.id}
-            id={menu.id}
-            title={!isMobile  ? menu.title : ""}
-            icon={menu.icon}
-            active={currentIndex === menu.id}
-            onClick={() => setCurrentIndex(menu.id)}
-          />
-        ))}
-      </ul>
-    </div>
-  </nav>
+      <div
+        className={`bg-black text-white p-5 z-10 ${
+          isMobile
+            ? "w-full absolute bottom-0"
+            : isTablet
+            ? "h-full w-1/5 absolute left-0 "
+            : "w-full absolute top-0"
+        }`}
+      >
+        <ul className="flex md:flex-col lg:flex-row md:items-starts items-center justify-around">
+          {menuList.map((menu) => (
+            <NavItem
+              key={menu.id}
+              id={menu.id}
+              title={menu.title}
+              icon={menu.icon}
+              active={currentIndex === menu.id}
+              onClick={() => setCurrentIndex(menu.id)}
+            />
+          ))}
+        </ul>
+      </div>
+    </nav>
   );
 };
 
