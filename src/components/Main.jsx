@@ -6,7 +6,7 @@ import Contact from './contact/Contact'
 
 const Main = () => {
   return (
-    <div id='home'>
+    <div>
       <Hero/>
       <Music/>
       <Video/>
