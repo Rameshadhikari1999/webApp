@@ -13,11 +13,11 @@ const Music = () => {
   };
 
   return (
-    <div id="music" className="w-full md:w-[80%] lg:w-full bg-gray-200">
+    <div id="music" className="w-full md:w-[80%] h-fit lg:w-full bg-gray-200">
 
       <section className="flex items-center gap-3 justify-around flex-grow flex-wrap flex-shrink p-5">
       {musicList.map((item) => (
-        <div key={item.id} onClick={()=>handleMusic(item)} className="w-1/3 md:w-1/4 p-3 shadow-sm hover:scale-105 rounded cursor-pointer shadow-gray-500 z-10 ">
+        <div key={item.id} onClick={()=>handleMusic(item)} className="w-1/3 md:w-1/4 p-3 shadow-sm hover:scale-105 rounded cursor-pointer shadow-gray-500">
         <div>
           <img src={item.img} alt="" />
         </div>

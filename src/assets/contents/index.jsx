@@ -43,7 +43,7 @@ const menuList = [
     },
     {
         id: 4,
-        title: "Contact",
+        title: "Profile",
         icon: IoIosContact
     },
 ];

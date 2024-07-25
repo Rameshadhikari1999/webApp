@@ -4,7 +4,7 @@ import Buttons from "./Buttons";
 
 const Hero = () => {
   return (
-    <div className="w-full lg:h-fit bg-gradient-to-r from-gray-500 via-gray-700 to-blue-200  relative">
+    <div id="home" className="w-full lg:h-fit pb-12 bg-gradient-to-r from-gray-500 via-gray-700 to-blue-200  relative">
       <h1 className="text-4xl lg:w-1/2 lg:mx-auto lg:py-5 font-mono font-bold capitalize text-white md:w-3/4 p-3">
         Music is the shothand of emotion
       </h1>

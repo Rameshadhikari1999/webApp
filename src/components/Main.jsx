@@ -2,7 +2,8 @@ import React from 'react'
 import Hero from './Hero'
 import Music from './music/Music'
 import Video from './video/Video'
-import Contact from './contact/Contact'
+import Profile from './profile/Profile'
+
 
 const Main = () => {
   return (
@@ -10,7 +11,7 @@ const Main = () => {
       <Hero/>
       <Music/>
       <Video/>
-      <Contact/>
+      <Profile/>
     </div>
   )
 }

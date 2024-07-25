@@ -79,6 +79,12 @@ const Play = () => {
     };
   }, [currentTrackIndex]);
 
+  const handleProgressChange = (e) => {
+    const newTime = (e.target.value * duration) / 100;
+    setCurrentTime(newTime);
+    audioRef.current.currentTime = newTime;
+  };
+
   return (
     <div className="w-full h-screen bg-gradient-to-r from-gray-500 via-gray-700 to-blue-200  relative text-white">
       <div onClick={handleBack} className="absolute top-5 left-5 text-red-500 text-4xl cursor-pointer">
@@ -102,12 +108,8 @@ const Play = () => {
             type="range"
             name="progress"
             id="progress"
-            value={currentTime}
-            onChange={(e) => {
-              const newTime = (e.target.value * duration) / 100;
-              setCurrentTime(newTime);
-              audioRef.current.currentTime = newTime;
-            }}
+            value={(currentTime / duration) * 100 || 0}
+            onChange={handleProgressChange}
           />
         </div>
         <div className="flex items-center gap-5 justify-center py-5">

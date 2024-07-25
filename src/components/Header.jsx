@@ -23,12 +23,12 @@ const Header = () => {
   return (
     <nav className="w-full h-screen relative">
       <div
-        className={`bg-black text-white p-5 z-10 ${
+        className={`bg-black  text-white p-5 z-10 ${
           isMobile
-            ? "w-full absolute bottom-0"
+            ? "w-full fixed bottom-0"
             : isTablet
-            ? "h-full w-1/5 absolute left-0 "
-            : "w-full absolute top-0"
+            ? "h-full w-1/5 fixed left-0 "
+            : "w-full fixed top-0"
         }`}
       >
         <ul className="flex md:flex-col lg:flex-row md:items-starts items-center justify-around">
