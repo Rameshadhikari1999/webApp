@@ -12,7 +12,7 @@ const Play = () => {
   const location = useLocation();
   let item = location.state || {};
 
-  const [currentTrackIndex, setCurrentTrackIndex] = useState(item.id);
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(item.id -1);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -20,8 +20,9 @@ const Play = () => {
 
 
   const playlist = musicList;
+  console.log("playlist", playlist[currentTrackIndex]);
 
-  // console.log(item);
+  console.log(item);
 
   const handlePlayPause = () => {
     if (isPlaying) {
